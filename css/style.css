@@ -1,0 +1,16 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: black solid 1px;
+}
+.main-data {
+    font-size: larger;
+    font-style: italic;
+}
+.desctiption {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+}
