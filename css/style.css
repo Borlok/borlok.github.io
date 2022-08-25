@@ -3,10 +3,11 @@
     flex-direction: row;
     justify-content: space-between;
     box-shadow: black 0 0 10px;
+    margin-top: 2vh;
+    padding: 1%;
     border-radius: 5px;
 }
 .card-left {
-    margin-left: 2vw;
 }
 .card-left p {
     margin-left: 2vw;
@@ -23,6 +24,19 @@
 }
 .photo {
     overflow: auto;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 1%;
+}
+.head-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    height: 5vh;
+    border-radius: 5px;
+    box-shadow: black 0 0 10px;
+}
+.main-buttons {
+    margin: 2vw;
 }
