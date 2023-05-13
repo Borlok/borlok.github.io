@@ -80,6 +80,8 @@ body {
 
 .layers__front {
     transform: translate3d(0, calc(var(--scrollTop) / 5.5), 0);
+    height: calc(var(--index) * 30);
+    min-width: calc(var(--index) * 40);
 }
 
 .layer__header {
@@ -250,7 +252,7 @@ body {
     z-index: 100;
     width: 100%;
     display: inline-block;
-    height: calc(var(--index) * 1);
+    height: calc(var(--index) * 5);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
