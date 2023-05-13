@@ -80,7 +80,7 @@ body {
 
 .layers__front {
     transform: translate3d(0, calc(var(--scrollTop) / 5.5), 0);
-    height: calc(var(--index) * 30);
+    height: calc(var(--index) * 20);
     min-width: calc(var(--index) * 40);
 }
 
