@@ -17,7 +17,7 @@
 }
 
 @font-face {
-    font-family: raleway_f;
+    font-family: raleway_b;
     src: url(../fonts/raleway-black.woff2);
     font-weight: 900;
 }
@@ -38,12 +38,14 @@ body {
     position: absolute;
     z-index: 100;
     width: 100%;
-    height: calc(var(--index) * 10);
-    background-image: url(../img/ground.png);
+    display: inline-block;
+    height: calc(var(--index) * 3.5);
+    background-color: black;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    bottom: calc(var(--index) * -4.5);
+    bottom: calc(var(--index) * -2.5);
+    box-shadow: 0 0 10px black, 0 0 20px black, 0 0 50px black, 0 0 80px black;
 }
 
 .layers {
@@ -89,6 +91,7 @@ body {
     color: var(--text-color);
     text-shadow: #bda266 0 0 15px;
     transition: var(--transition);
+    margin-top: calc(var(--index) * -5.75);
 }
 
 .layers__title {
@@ -99,7 +102,6 @@ body {
 .layers__caption {
     font-size: calc(var(--index) / 1.175);
     letter-spacing: calc(var(--index) / 3.5);
-    margin-top: calc(var(--index) * -3.75);
 }
 
 .main-article {
@@ -219,35 +221,8 @@ body {
     will-change: transform;
 }
 
-.card {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    box-shadow: black 0 0 10px;
-    margin-top: 2vh;
-    padding: 1%;
-    border-radius: 5px;
-}
-.card-left {
-}
-.card-left p {
-    margin-left: 2vw;
-}
-.main-data {
-    font-size: larger;
-    font-style: italic;
-}
-.desctiption {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-content: center;
-}
-.photo {
-    overflow: auto;
-    border-radius: 10px;
-    margin: 1%;
-}
+
+/*/////////////////*/
 .head-menu {
     display: flex;
     flex-direction: row;
@@ -255,8 +230,6 @@ body {
     align-content: center;
     align-items: center;
     height: calc(var(--index) * 4);
-    border-radius: 5px;
-    box-shadow: black 0 0 10px;
 }
 .main-buttons {
     margin: 2vw;
