@@ -9,12 +9,22 @@
     --text-color: #e7e7d3;
     --button-color: #e7e7d3;
     --transition: transform .75s cubic-bezier(.075, 0.5, 0, 1);
+    --h3: "Helvetica";
 }
 
 @font-face {
     font-family: raleway_f;
     src: url(../fonts/raleway-regular.woff2);
 }
+@font-face {
+    font-family: athelas_b;
+    src: url(../fonts/Athelas-Bold.ttf);
+}
+@font-face {
+    font-family: myraid_b;
+    src: url(../fonts/MYRIADPRO-BOLD.OTF);
+}
+
 
 @font-face {
     font-family: raleway_b;
@@ -245,6 +255,7 @@ body {
 .about-main-header {
     position: relative;
 }
+
 .about-main-header:after {
     content: '';
     background-image: url(../img/ground.png);
@@ -264,8 +275,135 @@ body {
     height: 100vh;
     overflow: hidden;
 }
+/*////////////////////////// Profile first window*/
+i {
+    color: #24ade0;
+    font-size: calc(var(--index) * 1.4);
+    margin-right: calc(var(--index) * .8);
+    margin-left: calc(var(--index) * .3);
+}
 
+.fas-mini {
+    font-size: calc(var(--index) * .9);
+}
 .profile {
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    border-radius: calc(var(--index) * .4);
+    color: #000000;
+    will-change: transform;
+    transition: var(--transition);
+    transform: var(--main-article);
+}
+
+.profile h1 {
+    font-size: calc(var(--index) * 1.9);
+    font-family: myraid_b;
+}
+
+.profile h2 {
+    font-size: calc(var(--index) * 1.6);
+    font-family: raleway_b;
+    margin: 1vh 0 1vh 0;
+}
+
+.profile h3 {
+    font-size: calc(var(--index) * 1.4);
+    font-family: raleway_b;
+}
+
+.profile p {
+    font-family: Arial;
+    font-size: calc(var(--index) * .9);
+    margin: 1vh 0 1vh 0;
+}
+
+.line {
+    height: calc(var(--index) / 4);
+    background-color: #505050;
+    border-radius: 10px;
+}
+
+.left {
+    padding-bottom: 3vh;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vw;
+    margin-top: 1vh;
+    width: 60vw;
+    height: 100vh;
+}
+
+.left-side__name {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-side__name h3 {
+    font-family: athelas_b;
+    color: #bda266;
+}
+
+.left-side__career {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-side__skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2vw;
+    margin-top: 4vh;
+    width: 30vw;
+    height: 100vh;
+}
+
+.right-side .fas-mini {
+    margin-left: calc(var(--index) * .9);
+}
+
+.right-side__contacts {
+}
+
+.right-side__languages {
+
+}
+
+.language {
+    display: flex;
+    flex-direction: column;
+}
+
+.language__skill {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.language__skill-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.language i {
+    margin-right: calc(var(--index) * .2);
+    margin-top: 1vw;
+    margin-bottom: 1vw;
 }
 
 .about-layer {
