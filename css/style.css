@@ -326,8 +326,9 @@ i {
 
 .line {
     height: calc(var(--index) / 4);
-    background-color: #505050;
+    background-color: #000000;
     border-radius: 10px;
+    box-shadow: 0 0 1px #24ade0;
 }
 
 .left {
@@ -392,6 +393,7 @@ i {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .language__skill-name {
@@ -400,8 +402,9 @@ i {
     justify-content: flex-end;
 }
 
-.language i {
-    margin-right: calc(var(--index) * .2);
+.fas-mini-lang {
+    margin-right: calc(var(--index) * .1);
+    font-size:calc(var(--index) * .7);;
     margin-top: 1vw;
     margin-bottom: 1vw;
 }
