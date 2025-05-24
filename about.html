@@ -1,124 +1,330 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Юрий Ерофеевский | Senior Java Developer</title>
     <link rel="stylesheet" href="css/style.css">
-
     <script src="libs/gsap/gsap.min.js" defer></script>
     <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
     <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
-
     <script src="js/app.js" defer></script>
     <script src="https://kit.fontawesome.com/c56eff491d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="wrapper">
-    <div class="content">
-        <div class="head-menu">
-            <div class="logo"></div>
-            <div class="main-buttons">
-                <a href="index.html" class="button">
-                    <span class="button-line button-line__top"></span>
-                    <span class="button-line button-line__right"></span>
-                    <span class="button-line button-line__bottom"></span>
-                    <span class="button-line button-line__left"></span>
-                    Main</a>
-                <a href="about.html" class="button">
-                    <span class="button-line button-line__top"></span>
-                    <span class="button-line button-line__right"></span>
-                    <span class="button-line button-line__bottom"></span>
-                    <span class="button-line button-line__left"></span>
-                    About</a>
-            </div>
+    <nav class="head-menu">
+        <div class="logo">
+            <span class="logo-text">YE</span>
         </div>
-        <header class="about-main-header">
-            <div class="about-layers">
-                <div class="profile" style="background-image: url(/img/обои.jpg)">
-                    <div class="left-side">
-                        <div class="left left-side__name">
-                            <h1>Ерофеевский Юрий Александрович</h1>
-                            <h3>Java Software Engineer</h3>
-                            <div style="display: flex; flex-direction: row; font-size: calc(var(--index))">
-                                <div style="margin-right: calc(var(--index) * 5)">
-                                    <p><i class="fas fas-mini fa-map-marker-alt"></i>г. Сыктывкар</p></div>
-                                <p id="years"></p>
-                            </div>
-                        </div>
-                        <div class="left left-side__career">
-                            <h2>Коротко о карьере</h2>
-                            <div class="line"></div>
-                            <p>В текущей компании занимаю должность ведущего инженера ПО.
-                                Занимаюсь разработкой многопоточной веб-платформы на серверной и клиентской сторонах,
-                                с использованием Java, Spring Framework, Angular. Принимал участие в проектных работах сторонних организаций,
-                                помогая им с интеграцией сервисов, решением проблем реализации бизнес-логики.
-                            </p>
-                        </div>
-                        <div class="left left-side__skills">
-                            <h2>Навыки</h2>
-                            <div class="line"></div>
-                            <p>Java • Spring Framework • Hibernate ORM • SQL • Maven/Gradle • JUnit • Mockito • Docker •
-                                Git</p>
-                        </div>
+        <div class="main-buttons">
+            <a href="index.html" class="button">
+                <span class="button-line button-line__top"></span>
+                <span class="button-line button-line__right"></span>
+                <span class="button-line button-line__bottom"></span>
+                <span class="button-line button-line__left"></span>
+                Главная</a>
+            <a href="about.html" class="button active">
+                <span class="button-line button-line__top"></span>
+                <span class="button-line button-line__right"></span>
+                <span class="button-line button-line__bottom"></span>
+                <span class="button-line button-line__left"></span>
+                Обо мне</a>
+        </div>
+    </nav>
+
+    <div class="content" style="margin-top: 80px;"> <!-- Добавлен отступ для меню -->
+        <header class="about-header">
+            <div class="container">
+                <div class="profile-header glass-card">
+                    <div class="profile-image">
+                        <img src="img/profile.jpg" alt="Юрий Ерофеевский">
                     </div>
-                    <div class="right-side">
-                        <div class="right-side__contacts">
-                            <h2><i class="fas fa-envelope-open"></i>Контакты</h2>
-                            <div class="line"></div>
-                            <p><i class="fas fas-mini fa-phone-alt"></i>+7(912)144-91-55</p>
-                            <p><i class="fas fas-mini fa-at"></i>borlok@bk.ru</p>
-                            <p><i class="fas fas-mini fa-paper-plane"></i>@borlok2</p>
+                    <div class="profile-info">
+                        <h1>Юрий Ерофеевский</h1>
+                        <h2>Senior Java Developer</h2>
+                        <div class="profile-meta">
+                            <p><i class="fas fa-map-marker-alt"></i> Россия, Сыктывкар</p>
+                            <p><i class="fas fa-laptop-house"></i> Готов к удаленной работе</p>
+                            <p><i class="fas fa-briefcase"></i> Опыт: 4+ лет</p>
+                            <p><i class="fas fa-dollar-sign"></i> Ожидания: от 350 000 ₽</p>
                         </div>
-                        <div class="right-side__languages">
-                            <h2><i class="fas fa-globe"></i>Языки</h2>
-                            <div class="line"></div>
-                            <div class="lan"></div>
-                            <div class="language">
-                                <div class="language__skill">
-                                    <p>Русский</p>
-                                    <div>
-                                        <i class="fas fas-mini-lang fa-circle"></i>
-                                        <i class="fas fas-mini-lang fa-circle"></i>
-                                        <i class="fas fas-mini-lang fa-circle"></i>
-                                        <i class="fas fas-mini-lang fa-circle"></i>
-                                        <i class="fas fas-mini-lang fa-circle"></i>
-                                    </div>
-                                </div>
-                                <p class="language__skill-name">
-                                    Native
-                                </p>
-                            </div>
-                            <div class="language">
-                                <div class="language__skill">
-                                    <p>English</p>
-                                    <div>
-                                        <i class="fas fas-mini-lang fa-circle"></i>
-                                        <i class="fas fas-mini-lang fa-circle"></i>
-                                        <i class="far fas-mini-lang fa-circle"></i>
-                                        <i class="far fas-mini-lang fa-circle"></i>
-                                        <i class="far fas-mini-lang fa-circle"></i>
-                                    </div>
-                                </div>
-                                <p class="language__skill-name">
-                                    A2(pre-intermediate)
-                                </p>
-                            </div>
+                        <div class="profile-social">
+                            <a href="https://t.me/borlok2" target="_blank" class="social-link"><i class="fab fa-telegram"></i></a>
+                            <a href="https://github.com/Borlok" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="https://career.habr.com/borlok" target="_blank" class="social-link"><i class="fab fa-hackerrank"></i></a>
+                            <a href="mailto:borlok@bk.ru" class="social-link"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        <div class="about-body">
-            <article class="main-article" style="background-image: url(img/skill-back.jpg)">
-                <div class="main-article__content">
-                    <div class="layer main-article__skills" style="background-image: url(img/Навыки.png)"></div>
+
+        <section class="section about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h2 class="section-title"><i class="fas fa-user-tie"></i> О себе</h2>
+                        <div class="divider"></div>
+                        <p>Опытный Java-разработчик с более чем 4-летним стажем, специализирующийся на создании высоконагруженных и отказоустойчивых систем.</p>
+                        <p>Обладаю глубокими знаниями в области микросервисной архитектуры, облачных технологий и распределенных систем.</p>
+                        <p>Постоянно совершенствую свои навыки, слежу за новыми технологиями и лучшими практиками в разработке.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <h2 class="section-title"><i class="fas fa-code"></i> Технологический стек</h2>
+                        <div class="divider"></div>
+                        <div class="skills-container">
+                            <div class="skill-category">
+                                <h3>Основные технологии</h3>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">Java 11/21</span>
+                                    <span class="skill-tag">Spring Boot 2/3</span>
+                                    <span class="skill-tag">Hibernate</span>
+                                    <span class="skill-tag">Spring Security</span>
+                                    <span class="skill-tag">WebFlux</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h3>Базы данных</h3>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">PostgreSQL</span>
+                                    <span class="skill-tag">MySQL</span>
+                                    <span class="skill-tag">R2DBC</span>
+                                    <span class="skill-tag">JPA</span>
+                                    <span class="skill-tag">Hibernate</span>
+                                    <span class="skill-tag">Spring Data</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h3>DevOps & Cloud</h3>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">Kubernetes</span>
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">Nginx</span>
+                                    <span class="skill-tag">CI/CD</span>
+                                    <span class="skill-tag">Nexus</span>
+                                    <span class="skill-tag">Keycloak</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h3>Архитектура</h3>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">Микросервисы</span>
+                                    <span class="skill-tag">REST API</span>
+                                    <span class="skill-tag">Apache Kafka</span>
+                                    <span class="skill-tag">Высоконагруженные системы</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-card">
+                        <h2 class="section-title"><i class="fas fa-briefcase"></i> Опыт работы</h2>
+                        <div class="divider"></div>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">Май 2024 — настоящее время</div>
+                                <div class="timeline-content">
+                                    <h3>Senior Java Developer</h3>
+                                    <h4>Талпабокс, Румыния (удаленно)</h4>
+                                    <div class="experience-section">
+                                        <div class="experience-item">
+                                            <div class="experience-header">
+                                                <i class="fas fa-rocket experience-icon"></i>
+                                                <h3 class="experience-title">Разработка высоконагруженных микросервисов</h3>
+                                            </div>
+                                            <p class="experience-description">Оптимизация производительности и масштабируемости системы, обработка до 5,000 RPS с задержкой менее 50мс</p>
+                                        </div>
+
+                                        <div class="experience-item">
+                                            <div class="experience-header">
+                                                <i class="fas fa-user-shield experience-icon"></i>
+                                                <h3 class="experience-title">Финансовые и пользовательские сервисы</h3>
+                                            </div>
+                                            <p class="experience-description">Создание безопасной системы управления счетами и персональными данными с Keycloak</p>
+                                        </div>
+
+                                        <div class="experience-item">
+                                            <div class="experience-header">
+                                                <i class="fas fa-network-wired experience-icon"></i>
+                                                <h3 class="experience-title">Оркестрация процессов</h3>
+                                            </div>
+                                            <p class="experience-description">
+                                                Разработка сервиса регистрации с использованием:
+                                                <span class="tech-tag">SAGA-транзакции</span>
+                                                <span class="tech-tag">Реактивный стек</span>
+                                                <span class="tech-tag">Keycloak</span>
+                                            </p>
+                                        </div>
+
+                                        <div class="experience-item">
+                                            <div class="experience-header">
+                                                <i class="fas fa-server experience-icon"></i>
+                                                <h3 class="experience-title">DevOps-практики</h3>
+                                            </div>
+                                            <div class="devops-list">
+                                                <div class="devops-item">
+                                                    <span class="devops-number">1</span>
+                                                    <p>Развертывание тестовых стендов для нагрузочного тестирования (wrk/wrk2)</p>
+                                                </div>
+                                                <div class="devops-item">
+                                                    <span class="devops-number">2</span>
+                                                    <p>Настройка CI/CD процессов (GitLab CI) с автоматическими билдом, тестированием и деплоем в k8s</p>
+                                                </div>
+                                                <div class="devops-item">
+                                                    <span class="devops-number">3</span>
+                                                    <p>Внедрение Kubernetes (EKS) с Horizontal Pod Autoscaling</p>
+                                                </div>
+                                                <div class="devops-item no-number">
+                                                    <p><strong>Повышение отказоустойчивости:</strong> Реализация стратегий Circuit Breaker, Retry и Bulkhead</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-skills">
+                                        <span>Java</span>
+                                        <span>Spring Boot</span>
+                                        <span>PostgreSQL</span>
+                                        <span>Kubernetes</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Январь 2021 — Сентябрь 2024</div>
+                                <div class="timeline-content">
+                                    <h3>Middle Java Developer</h3>
+                                    <h4>Талпабокс, Румыния (удаленно)</h4>
+                                    <div class="experience-section">
+                                        <div class="experience-item">
+                                            <div class="experience-header">
+                                                <i class="fas fa-sitemap experience-icon"></i>
+                                                <h3 class="experience-title">Сервисы структуризации данных</h3>
+                                            </div>
+                                            <p class="experience-description">
+                                                Разработка комплексного решения для:
+                                                <span class="tech-tag">структуризации компаний</span>
+                                                <span class="tech-tag">автоматизации отчетности</span>
+                                                <span class="tech-tag">импорта данных</span>
+                                            </p>
+                                        </div>
+
+                                        <div class="experience-item">
+                                            <div class="experience-header">
+                                                <i class="fas fa-tachometer-alt experience-icon"></i>
+                                                <h3 class="experience-title">Оптимизация производительности</h3>
+                                            </div>
+                                            <div class="performance-improvement">
+                                                <div class="improvement-metric">
+                                                    <div class="metric-value">1500%</div>
+                                                    <div class="metric-label">увеличение скорости</div>
+                                                </div>
+                                                <div class="improvement-details">
+                                                    <p>Оптимизация многопоточности в сервисе импорта данных:</p>
+                                                    <ul class="improvement-list">
+                                                        <li>Сокращение времени обработки с <strong>5+ часов</strong> до <strong>20 минут</strong></li>
+                                                        <li>Реализация batch-обработки с динамическим распределением нагрузки</li>
+                                                        <li>Оптимизация работы с памятью и БД</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="experience-item">
+                                            <div class="experience-header">
+                                                <i class="fas fa-desktop experience-icon"></i>
+                                                <h3 class="experience-title">Десктоп приложение</h3>
+                                            </div>
+                                            <p class="experience-description">
+                                                Создание нативного desktop-приложения для веб-платформы с:
+                                                <span class="tech-tag">оффлайн-режимом</span>
+                                                <span class="tech-tag">синхронизацией данных</span>
+                                                <span class="tech-tag">системными интеграциями</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-skills">
+                                        <span>Java</span>
+                                        <span>Spring Framework</span>
+                                        <span>Docker</span>
+                                        <span>CI/CD</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Ноябрь 2021 — Февраль 2022</div>
+                                <div class="timeline-content">
+                                    <h3>Java Software Engineer</h3>
+                                    <h4>Atlantis TMS, Румыния (проектная работа)</h4>
+                                    <ul class="timeline-list">
+                                        <li>Интеграция с сервисом онлайн бухгалтерии "Intuit Quickbooks"</li>
+                                        <li>Настройка REST взаимодействия микросервисов</li>
+                                    </ul>
+                                    <div class="timeline-skills">
+                                        <span>Java 11</span>
+                                        <span>Spring Boot</span>
+                                        <span>Gradle</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-card">
+                        <h2 class="section-title"><i class="fas fa-language"></i> Языки</h2>
+                        <div class="divider"></div>
+                        <div class="language-item">
+                            <div class="language-info">
+                                <span>Русский</span>
+                                <span>Родной</span>
+                            </div>
+                            <div class="language-level">
+                                <div class="level-fill" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="language-item">
+                            <div class="language-info">
+                                <span>English</span>
+                                <span>Intermediate (B1)</span>
+                            </div>
+                            <div class="language-level">
+                                <div class="level-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-<!--                    <h1 class="main-article__header">To be continued...</h1>-->
-<!--                    <p class="main-article__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
-<!--                        Accusantium aliquid aspernatur atque consequuntur corporis ducimus, explicabo fuga in iusto-->
-<!--                        mollitia officia quae quibusdam quidem ratione sapiente veniam vitae voluptas voluptatem.</p>-->
-            </article>
-        </div>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <span class="logo-text">YE</span>
+                        <span class="logo-caption">Senior Java Developer</span>
+                    </div>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Главная</a>
+                        <a href="about.html" class="footer-link">Обо мне</a>
+                        <a href="#skills" class="footer-link">Навыки</a>
+                        <a href="#experience" class="footer-link">Опыт</a>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://t.me/borlok2" class="social-link" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://github.com/Borlok" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://career.habr.com/borlok" class="social-link" target="_blank"><i class="fab fa-hackerrank"></i></a>
+                        <a href="mailto:borlok@bk.ru" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p>© 2024 Юрий Ерофеевский. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
     </div>
 </div>
 </body>

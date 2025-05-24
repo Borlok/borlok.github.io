@@ -1,57 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Software Engineering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuri Erofeevsky | Senior Java Developer</title>
     <link rel="stylesheet" href="css/style.css">
-
     <script src="libs/gsap/gsap.min.js" defer></script>
     <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
     <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
-
     <script src="js/app.js" defer></script>
+    <script src="https://kit.fontawesome.com/c56eff491d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="wrapper">
     <div class="content">
-        <div class="head-menu">
-            <div class="logo"></div>
+        <nav class="head-menu">
+            <div class="logo">
+                <span class="logo-text">YE</span>
+            </div>
             <div class="main-buttons">
-                <a href="index.html" class="button">
+                <a href="index.html" class="button active">
                     <span class="button-line button-line__top"></span>
                     <span class="button-line button-line__right"></span>
                     <span class="button-line button-line__bottom"></span>
                     <span class="button-line button-line__left"></span>
-                    Main
-                </a>
+                    Главная</a>
                 <a href="about.html" class="button">
                     <span class="button-line button-line__top"></span>
                     <span class="button-line button-line__right"></span>
                     <span class="button-line button-line__bottom"></span>
                     <span class="button-line button-line__left"></span>
-                    About</a>
+                    Обо мне</a>
             </div>
-        </div>
-        <header class="main-header">
-            <div class="layers">
-                <div class="layer__header">
-                    <div class="layers__caption">Welcome to my</div>
-                    <div class="layers__title">space</div>
+        </nav>
+
+        <header class="main-hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Юрий Ерофеевский</span>
+                    </h1>
+                    <p class="hero-subtitle">4+ лет опыта в разработке в качестве Java Software Engineer. Специализация: высоконагруженные и отказоустойчивые системы</p>
+                    <div class="hero-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Россия, Сыктывкар</p>
+                        <p><i class="fas fa-laptop-house"></i> Удалённая работа</p>
+                        <p><i class="fas fa-dollar-sign"></i> Ожидания: от 350 000 ₽</p>
+                        <br>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="#projects" class="cta-button primary">Мои проекты</a>
+                        <a href="about.html" class="cta-button secondary">Подробное резюме →</a>
+                    </div>
                 </div>
-                <div class="layer layers__base" style="background-image: url(img/space-back.jpeg)"></div>
-                <div class="layer layers__middle" style="background-image: url(img/space-middle.png)"></div>
-                <div class="layer layers__front" style="background-image: url(img/drednout-center-left.png)"></div>
+                <div class="hero-image">
+                    <div class="code-snippet">
+                        <div class="code-header">
+                            <span class="code-dot red"></span>
+                            <span class="code-dot yellow"></span>
+                            <span class="code-dot green"></span>
+                            <span class="code-title">MicroserviceConfig.java</span>
+                        </div>
+                        <pre><code>@Configuration
+@EnableDiscoveryClient
+public class ServiceConfig {
+
+    @Bean
+    @LoadBalanced
+    public WebClient.Builder
+    loadBalancedWebClientBuilder() {
+        return WebClient.builder();
+    }
+
+    @Bean
+    public Resilience4JCircuitBreakerFactory
+    resilience4JCircuitBreakerFactory() {
+        return new Resilience4JCircuitBreakerFactory();
+    }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll down</span>
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
             </div>
         </header>
-        <article class="main-article" style="background-image: url(img/earth-core.jpeg)">
-            <div class="main-article__content">
-                <h1 class="main-article__header">To be continued...</h1>
-                <p class="main-article__paragraph">
-                    Это моя страница, предназначение которой еще не известно. Возможно я напишу о себе, может это будет сайт с портфолио, скилами и описанием проектов,
-                    Возможно это будет что-то другое.
-                </p>
+
+        <section id="expertise" class="section dark-section">
+            <div class="container">
+                <h2 class="section-title">Технологический стек</h2>
+                <div class="expertise-grid">
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <h3>Java Development</h3>
+                        <div class="skills-tags">
+                            <span class="skill-tag">Java 11+</span>
+                            <span class="skill-tag">Spring Boot</span>
+                            <span class="skill-tag">Hibernate</span>
+                            <span class="skill-tag">Spring Security</span>
+                            <span class="skill-tag">WebFlux</span>
+                        </div>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Базы данных</h3>
+                        <div class="skills-tags">
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">R2DBC</span>
+                            <span class="skill-tag">JPA</span>
+                            <span class="skill-tag">Hibernate</span>
+                            <span class="skill-tag">Spring Data</span>
+                        </div>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>DevOps & Cloud</h3>
+                        <div class="skills-tags">
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Nginx</span>
+                            <span class="skill-tag">CI/CD</span>
+                            <span class="skill-tag">Keycloak</span>
+                            <span class="skill-tag">Nexus</span>
+                        </div>
+                    </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>Архитектура</h3>
+                        <div class="skills-tags">
+                            <span class="skill-tag">Микросервисы</span>
+                            <span class="skill-tag">REST API</span>
+                            <span class="skill-tag">Apache Kafka</span>
+                            <span class="skill-tag">Высоконагруженные системы</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </article>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Опыт работы</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Май 2024 — настоящее время</div>
+                        <div class="timeline-content">
+                            <h3>Senior Java Developer</h3>
+                            <h4>Талпабокс, Румыния (удаленно)</h4>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>Spring Boot</span>
+                                <span>Postgres</span>
+                                <span>Kubernetes</span>
+                                <span>Kafka</span>
+                            </div>
+                            <p>Сервис платежей для управления пользовательскими профилями, кошельками и безопасными денежными переводами.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Январь 2021 — Сентябрь 2024</div>
+                        <div class="timeline-content">
+                            <h3>Middle Java Developer</h3>
+                            <h4>Талпабокс, Румыния (удаленно)</h4>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>Spring Framework</span>
+                                <span>Docker</span>
+                                <span>CI/CD</span>
+                            </div>
+                            <p>Веб-платформа для работы с клиентами и документами, возможность настройки под любые сферы деятельности с использованием no-code и low-code для управления и оптимизации рабочих процессов.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="github" class="section dark-section">
+            <div class="container">
+                <h2 class="section-title">GitHub активность</h2>
+                <div class="github-stats">
+                    <div class="github-stat">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h3>281</h3>
+                            <p>вклад</p>
+                        </div>
+                    </div>
+                    <div class="github-stat">
+                        <i class="fas fa-code-branch"></i>
+                        <div>
+                            <h3>29</h3>
+                            <p>репозиториев</p>
+                        </div>
+                    </div>
+                    <div class="github-stat">
+                        <i class="fas fa-code"></i>
+                        <div>
+                            <h3>Java/TS/HTML</h3>
+                            <p>основные языки</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://github.com/Borlok" class="cta-button primary github-button" target="_blank">
+                    <i class="fab fa-github" style="color: white"></i>Мой GitHub профиль
+                </a>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <div class="container">
+                <h2 class="cta-title">Готов к новым вызовам</h2>
+                <p class="cta-subtitle">Ищу интересные проекты в области высоконагруженных систем и микросервисной архитектуры</p>
+                <div class="cta-buttons">
+                    <a href="mailto:borlok@bk.ru" class="cta-button primary">Написать</a>
+                    <a href="about.html" class="cta-button secondary">Полное резюме</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <span class="logo-text">YE</span>
+                        <span class="logo-caption">Senior Java Developer</span>
+                    </div>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Главная</a>
+                        <a href="about.html" class="footer-link">Обо мне</a>
+                        <a href="#experience" class="footer-link">Экспертиза</a>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p>© 2025 Юрий Ерофеевский. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
     </div>
 </div>
 </body>
