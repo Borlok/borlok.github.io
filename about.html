@@ -77,7 +77,7 @@
                     <div class="about-card">
                         <h2 class="section-title"><i class="fas fa-code"></i> Технологический стек</h2>
                         <div class="divider"></div>
-                        <div class="skills-container">
+                        <div id="skills" class="skills-container">
                             <div class="skill-category">
                                 <h3>Основные технологии</h3>
                                 <div class="skills-tags">
@@ -122,7 +122,7 @@
                         </div>
                     </div>
 
-                    <div class="about-card">
+                    <div id="experience" class="about-card">
                         <h2 class="section-title"><i class="fas fa-briefcase"></i> Опыт работы</h2>
                         <div class="divider"></div>
                         <div class="timeline">
@@ -321,11 +321,26 @@
                     </div>
                 </div>
                 <div class="footer-copyright">
-                    <p>© 2024 Юрий Ерофеевский. Все права защищены.</p>
+                    <p>© 2025 Юрий Ерофеевский. Все права защищены.</p>
                 </div>
             </div>
         </footer>
     </div>
 </div>
 </body>
+
+<script>document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop + 300, // Учитываем высоту меню
+                behavior: 'smooth'
+            });
+        }
+    });
+});</script>
 </html>

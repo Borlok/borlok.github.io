@@ -68,7 +68,7 @@
                         <div class="code-container intellij-theme">
 <pre><code><span class="code-annotation">@Configuration</span>
 <span class="code-annotation">@EnableDiscoveryClient</span>
-<span class="code-keyword">public class</span> <span class="code-class">ServiceConfig</span> {
+<span class="code-keyword">public class</span> <span class="code-class">MicroserviceConfig</span> {
 
     <span class="code-annotation">@Bean</span>
     <span class="code-annotation">@LoadBalanced</span>
@@ -261,7 +261,7 @@
                     <div class="footer-links">
                         <a href="index.html" class="footer-link">Главная</a>
                         <a href="about.html" class="footer-link">Обо мне</a>
-                        <a href="#experience" class="footer-link">Экспертиза</a>
+                        <a href="#expertise" class="footer-link">Экспертиза</a>
                     </div>
                     <div class="profile-social">
                         <a href="https://t.me/borlok2" target="_blank" class="social-link"><i class="fab fa-telegram"></i></a>
@@ -278,4 +278,18 @@
     </div>
 </div>
 </body>
+<script>document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80, // Учитываем высоту меню
+                behavior: 'smooth'
+            });
+        }
+    });
+});</script>
 </html>

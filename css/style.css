@@ -1398,7 +1398,7 @@ code {
 
 /* IntelliJ Darcula Theme */
 .code-container.intellij-theme {
-    background: #2B2B2B;
+    background: #1f2023;
     border-radius: 6px;
     padding: 16px;
     overflow: auto;
@@ -1436,7 +1436,6 @@ code {
     content: '';
     display: block;
     height: 12px;
-    margin-bottom: 16px;
     background: #3C3F41;
     border-radius: 4px 4px 0 0;
 }
