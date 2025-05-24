@@ -1395,3 +1395,48 @@ code {
         font-size: 2rem;
     }
 }
+
+/* IntelliJ Darcula Theme */
+.code-container.intellij-theme {
+    background: #2B2B2B;
+    border-radius: 6px;
+    padding: 16px;
+    overflow: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #A9B7C6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.intellij-theme code {
+    font-family: inherit;
+    display: block;
+}
+
+/* Цвета синтаксиса */
+.intellij-theme .code-keyword {
+    color: #CF8E6D; /* оранжевый */
+}
+
+.intellij-theme .code-class {
+    color: #BCBEC4; /* желтый */
+}
+
+.intellij-theme .code-method {
+    color: #BCBEC4; /* светлый */
+}
+
+.intellij-theme .code-annotation {
+    color: #B3AE60; /* желто-зеленый */
+}
+
+/* Дополнительные элементы */
+.intellij-theme::before {
+    content: '';
+    display: block;
+    height: 12px;
+    margin-bottom: 16px;
+    background: #3C3F41;
+    border-radius: 4px 4px 0 0;
+}

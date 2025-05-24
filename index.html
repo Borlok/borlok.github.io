@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="wrapper">
@@ -64,23 +65,25 @@
                             <span class="code-dot green"></span>
                             <span class="code-title">MicroserviceConfig.java</span>
                         </div>
-                        <pre><code>@Configuration
-@EnableDiscoveryClient
-public class ServiceConfig {
+                        <div class="code-container intellij-theme">
+<pre><code><span class="code-annotation">@Configuration</span>
+<span class="code-annotation">@EnableDiscoveryClient</span>
+<span class="code-keyword">public class</span> <span class="code-class">ServiceConfig</span> {
 
-    @Bean
-    @LoadBalanced
-    public WebClient.Builder
-    loadBalancedWebClientBuilder() {
-        return WebClient.builder();
+    <span class="code-annotation">@Bean</span>
+    <span class="code-annotation">@LoadBalanced</span>
+    <span class="code-keyword">public</span> <span class="code-class">WebClient</span>.<span class="code-class">Builder</span>
+    <span class="code-method">loadBalancedWebClientBuilder</span>() {
+        <span class="code-keyword">return</span> <span class="code-class">WebClient</span>.<span class="code-method">builder</span>();
     }
 
-    @Bean
-    public Resilience4JCircuitBreakerFactory
-    resilience4JCircuitBreakerFactory() {
-        return new Resilience4JCircuitBreakerFactory();
+    <span class="code-annotation">@Bean</span>
+    <span class="code-keyword">public</span> <span class="code-class">Resilience4JCircuitBreakerFactory</span>
+    <span class="code-method">resilience4JCircuitBreakerFactory</span>() {
+        <span class="code-keyword">return</span> <span class="code-keyword">new</span> <span class="code-class">Resilience4JCircuitBreakerFactory</span>();
     }
 }</code></pre>
+                        </div>
                     </div>
                 </div>
             </div>
