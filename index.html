@@ -42,14 +42,15 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1 class="hero-title">
-                        <span class="title-line">Юрий Ерофеевский</span>
+                        <span class="title-line">Юрий Ерофеевский Александрович</span>
                     </h1>
-                    <p class="hero-subtitle">Более 5 лет опыта в разработке в качестве Java Software Engineer.</p>
+                    <p class="hero-subtitle">Опыт в разработке с 2021 года в качестве Java Software Engineer.</p>
+                    <p class="hero-subtitle">Team/Tech Lead c 2025 года.</p>
                     <p class="hero-subtitle" style="color: var(--primary-color);">Специализация: высоконагруженные и отказоустойчивые системы</p>
                     <div class="hero-info">
                         <p><i class="fas fa-map-marker-alt"></i> Россия, Сыктывкар</p>
                         <p><i class="fas fa-laptop-house"></i> Удалённая работа</p>
-                        <p><i class="fas fa-dollar-sign"></i> Ожидания: от 350 000 ₽</p>
+                        <p><i class="fas fa-dollar-sign"></i> Ожидания: от 450 000 ₽</p>
                         <br>
                     </div>
                     <div class="hero-cta">
@@ -161,7 +162,22 @@
                 <h2 class="section-title">Опыт работы</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-date">Май 2024 — настоящее время</div>
+                        <div class="timeline-date">Август 2025 — настоящее время</div>
+                        <div class="timeline-content">
+                            <h3>Team/Tech Lead | Senior Java Developer</h3>
+                            <h4>ООО "MTS Web Services"</h4>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>Spring Boot</span>
+                                <span>Postgres</span>
+                                <span>Kubernetes</span>
+                                <span>Kafka</span>
+                            </div>
+                            <p>MWS Tables</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Май 2024 — Август 2025</div>
                         <div class="timeline-content">
                             <h3>Senior Java Developer</h3>
                             <h4>TALPA BOX S.R.L.</h4>
@@ -242,8 +258,9 @@
 
         <section class="section cta-section">
             <div class="container">
-                <h2 class="cta-title">Готов к новым вызовам</h2>
-                <p class="cta-subtitle">Ищу интересные проекты в области высоконагруженных систем и микросервисной архитектуры</p>
+                <h2 class="cta-title">Что-то еще?</h2>
+                <p class="cta-subtitle">Главной ценностью для меня являются люди. Интересный проект - это, конечно же, важная часть работы.
+                    Но все всегда упирается в людей. На самом крутом проекте вы не сможете наслаждаться своей работой, если в коллективе вы будете чужим.</p>
                 <div class="cta-buttons">
                     <a href="mailto:borlok@bk.ru" class="cta-button primary">Написать</a>
                     <a href="about.html" class="cta-button secondary">Полное резюме</a>
@@ -256,7 +273,7 @@
                 <div class="footer-content">
                     <div class="footer-logo">
                         <span class="logo-text">YE</span>
-                        <span class="logo-caption">Senior Java Developer</span>
+                        <span class="logo-caption">Team/Tech Lead | Senior Java Developer</span>
                     </div>
                     <div class="footer-links">
                         <a href="index.html" class="footer-link">Главная</a>
@@ -291,5 +308,37 @@
             });
         }
     });
-});</script>
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.3 });
+
+    timelineItems.forEach(item => {
+        observer.observe(item);
+    });
+
+// Плавный скролл для якорных ссылок
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+</script>
 </html>

@@ -45,12 +45,12 @@
                     </div>
                     <div class="profile-info">
                         <h1>Юрий Ерофеевский</h1>
-                        <h2>Senior Java Developer</h2>
+                        <h2>Team/Tech Lead | Senior Java Developer</h2>
                         <div class="profile-meta">
                             <p><i class="fas fa-map-marker-alt"></i> Россия, Сыктывкар</p>
                             <p><i class="fas fa-laptop-house"></i> Готов к удаленной работе</p>
-                            <p><i class="fas fa-briefcase"></i> Опыт: 5 лет</p>
-                            <p><i class="fas fa-dollar-sign"></i> Ожидания: от 350 000 ₽</p>
+                            <p><i class="fas fa-briefcase"></i> Опыт: с 2021г.</p>
+                            <p><i class="fas fa-dollar-sign"></i> Ожидания: от 450 000 ₽</p>
                         </div>
                         <div class="profile-social">
                             <a href="https://t.me/borlok2" target="_blank" class="social-link"><i class="fab fa-telegram"></i></a>
@@ -69,7 +69,7 @@
                     <div class="about-card">
                         <h2 class="section-title"><i class="fas fa-user-tie"></i> О себе</h2>
                         <div class="divider"></div>
-                        <p>Опытный Java-разработчик с более чем 5-летним стажем, специализирующийся на создании высоконагруженных и отказоустойчивых систем.</p>
+                        <p>Специализируюсь на создании высоконагруженных и отказоустойчивых систем.</p>
                         <p>Обладаю глубокими знаниями в области микросервисной архитектуры, облачных технологий и распределенных систем.</p>
                         <p>Постоянно совершенствую свои навыки, слежу за новыми технологиями и лучшими практиками в разработке.</p>
                     </div>
@@ -127,7 +127,25 @@
                         <div class="divider"></div>
                         <div class="timeline">
                             <div class="timeline-item">
-                                <div class="timeline-date">Май 2024 — настоящее время</div>
+                                <div class="timeline-date">Август 2025 — настоящее время</div>
+                                <div class="timeline-content">
+                                    <h3>Team/Tech Lead | Senior Java Developer</h3>
+                                    <h4>ООО "MTS Web Services"</h4>
+                                    <div class="experience-section">
+                                        <div class="experience-item">
+
+                                        </div>
+                                    </div>
+                                    <div class="timeline-skills">
+                                        <span>Java</span>
+                                        <span>Spring Boot</span>
+                                        <span>PostgreSQL</span>
+                                        <span>Kubernetes</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Май 2024 — август 2025</div>
                                 <div class="timeline-content">
                                     <h3>Senior Java Developer</h3>
                                     <h4>TALPA BOX S.R.L.</h4>
@@ -342,5 +360,38 @@
             });
         }
     });
-});</script>
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.3 });
+
+    timelineItems.forEach(item => {
+        observer.observe(item);
+    });
+
+// Плавный скролл для якорных ссылок
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+</script>
 </html>
